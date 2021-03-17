@@ -25,7 +25,7 @@ with open('face_sdk/config/model_conf.yaml') as f:
 
 def detect(image, image_path, first_dir):
     # common setting for all model, need not modify.
-    print("--------------------------------------DETECT-----------------------------")
+    # print("--------------------------------------DETECT-----------------------------")
     model_path = 'face_sdk/models'
 
     # model setting, modified along with model
@@ -53,17 +53,6 @@ def detect(image, image_path, first_dir):
     else:
         logger.info('Successfully loaded the face detection model!')
 
-    # # read image
-    # image_path = 'data/images/images_test/TD_RGB_E_11.jpg'
-    # image = cv2.imread(image_path, cv2.IMREAD_COLOR)
-
-    # # resize
-    # height, width, channels = image.shape
-    # print("------------------: ", width, height)
-    # if width > 1000 or height > 1000:
-    #     image = cv2.resize(image, None, fx=0.2, fy=0.2, interpolation=cv2.INTER_CUBIC)
-    # # resize
-
     faceDetModelHandler = FaceDetModelHandler(model, 'cpu', cfg)
 
     try:
@@ -78,10 +67,7 @@ def detect(image, image_path, first_dir):
     # gen result
     image_path_main = image_path.split(".")[0]
     image_path_ext = image_path.split(".")[1]
-    save_path_img = image_path_main + "_detect." + image_path_ext #image_path.replace("images_test", "images_detect")
-    # save_path_txt = 'data/meta_data/detect_res/' + image_path.split('/')[-1]
-    # save_path_txt = save_path_txt.replace(".jpg", ".txt")
-    # save_path_txt = 'data/meta_data/detect_res/' + image_path.split(".")[0].split("/")[-1] + "_" + first_dir + ".txt"
+    # save_path_img = image_path_main + "_detect." + image_path_ext
     save_path_txt = 'data/images/' + first_dir + "/" + image_path.split(".")[0].split("/")[-1] + "_box" + ".txt"
 
 

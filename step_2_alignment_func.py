@@ -20,7 +20,7 @@ with open('face_sdk/config/model_conf.yaml') as f:
 
 def align(image, image_path, first_dir):
     # common setting for all model, need not modify.
-    print("--------------------------------------ALIGN-----------------------------")
+    # print("--------------------------------------ALIGN-----------------------------")
 
     model_path = 'models'
 
@@ -51,18 +51,7 @@ def align(image, image_path, first_dir):
 
     faceAlignModelHandler = FaceAlignModelHandler(model, 'cpu', cfg)
 
-    # read image
-    # image_path = 'data/images/images_test/TD_RGB_E_11.jpg'
-    # image_det_txt_path = 'data/meta_data/detect_res/' + image_path.split(".")[0].split("/")[-1] + "_" + first_dir + ".txt"
     image_det_txt_path = 'data/images/' + first_dir + "/" + image_path.split(".")[0].split("/")[-1] + "_box" + ".txt"
-
-    # image = cv2.imread(image_path, cv2.IMREAD_COLOR)
-    # # resize   
-    # height, width, channels = image.shape
-    # print("------------------: ", width, height)
-    # if width > 1000 or height > 1000:
-    #     image = cv2.resize(image, None, fx=0.2, fy=0.2, interpolation=cv2.INTER_CUBIC)
-    # # resize
 
     with open(image_det_txt_path, 'r') as f:
         lines = f.readlines()
@@ -74,7 +63,7 @@ def align(image, image_path, first_dir):
             #
             image_path_main = image_path.split(".")[0]
             image_path_ext = image_path.split(".")[1]
-            save_path_img = image_path_main + "_landmark." + image_path_ext 
+            # save_path_img = image_path_main + "_landmark." + image_path_ext 
             #
             # save_path_txt = image_det_txt_path.replace("detect_res", "landmark_res")
             save_path_txt = image_det_txt_path.replace("_box", "_landmark")

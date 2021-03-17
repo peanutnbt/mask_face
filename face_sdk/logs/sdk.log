@@ -1,38 +1,71 @@
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: PixelXDimension (40962) - type: short (3) - value: b'\x12\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: PixelYDimension (40963) - type: short (3) - value: b'\x0c\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x94\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: SensingMethod (41495) - type: short (3) - value: b'\x00\x02'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: FileSource (41728) - type: undefined (7) - value: b'\x03'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: SceneType (41729) - type: undefined (7) - value: b'\x01'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: CFAPattern (41730) - type: undefined (7) Tag Location: 578 - Data Location: 848 - value: b'\x00\x02\x00\x02\x01\x02\x00\x01'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: CustomRendered (41985) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: DigitalZoomRatio (41988) - type: rational (5) Tag Location: 626 - Data Location: 856 - value: b'\x00\x00\x00\x01\x00\x00\x00\x01'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: FocalLengthIn35mmFilm (41989) - type: short (3) - value: b'\x004'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: SceneCaptureType (41990) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: GainControl (41991) - type: short (3) - value: b'\x00\x02'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: Contrast (41992) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: Saturation (41993) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: Sharpness (41994) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: SubjectDistanceRange (41996) - type: short (3) - value: b'\x00\x00'
-DEBUG 2021-03-17 09:57:56 TiffImagePlugin.py: 789] tag: unknown (0) - type: byte (1) - value: b'\x02\x02\x00\x00'
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 802
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
-DEBUG 2021-03-17 09:57:57 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
-WARNING 2021-03-17 09:58:05 util.py: 42] Lossy conversion from float64 to uint8. Range [0, 1]. Convert image to uint8 prior to saving to suppress this warning.
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Make (271) - type: string (2) Tag Location: 22 - Data Location: 148 - value: b'NIKON CORPORATION\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Model (272) - type: string (2) Tag Location: 34 - Data Location: 168 - value: b'NIKON D3100\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Orientation (274) - type: short (3) - value: b'\x00\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: XResolution (282) - type: rational (5) Tag Location: 58 - Data Location: 180 - value: b'\x00\x00\x01,\x00\x00\x00\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: YResolution (283) - type: rational (5) Tag Location: 70 - Data Location: 188 - value: b'\x00\x00\x01,\x00\x00\x00\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Software (305) - type: string (2) Tag Location: 94 - Data Location: 196 - value: b'Ver.1.01 \x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 208 - value: b'2010:04:08 22:13:21\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x02'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xe4'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: GPSInfoIFD (34853) - type: long (4) - value: b'\x00\x00\x91\xb0'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ExposureTime (33434) - type: rational (5) Tag Location: 242 - Data Location: 716 - value: b'\x00\x00\x00\n\x00\x00\x00\xfa'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: FNumber (33437) - type: rational (5) Tag Location: 254 - Data Location: 724 - value: b'\x00\x00\x002\x00\x00\x00\n'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x0c\x80'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ExifVersion (36864) - type: undefined (7) - value: b'0221'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 302 - Data Location: 732 - value: b'2010:04:08 22:13:21\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 314 - Data Location: 752 - value: b'2010:04:08 22:13:21\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: CompressedBitsPerPixel (37122) - type: rational (5) Tag Location: 338 - Data Location: 772 - value: b'\x00\x00\x00\x02\x00\x00\x00\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ExposureBiasValue (37380) - type: signed rational (10) Tag Location: 350 - Data Location: 780 - value: b'\x00\x00\x00\x00\x00\x00\x00\x06'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 362 - Data Location: 788 - value: b'\x00\x00\x00/\x00\x00\x00\n'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x05'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: LightSource (37384) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Flash (37385) - type: short (3) - value: b'\x00\x10'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: FocalLength (37386) - type: rational (5) Tag Location: 410 - Data Location: 796 - value: b'\x00\x00\x01^\x00\x00\x00\n'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: MakerNote (37500) - type: undefined (7) Tag Location: 422 - Data Location: 864 - value: <table: 36400 bytes>
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: UserComment (37510) - type: undefined (7) Tag Location: 434 - Data Location: 804 - value: <table: 44 bytes>
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: SubSec (37520) - type: string (2) - value: b'80\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: SubSecTimeOriginal (37521) - type: string (2) - value: b'80\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: SubsecTimeDigitized (37522) - type: string (2) - value: b'80\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: PixelXDimension (40962) - type: short (3) - value: b'\x12\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: PixelYDimension (40963) - type: short (3) - value: b'\x0c\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x91\x90'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: SensingMethod (41495) - type: short (3) - value: b'\x00\x02'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: FileSource (41728) - type: undefined (7) - value: b'\x03'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: SceneType (41729) - type: undefined (7) - value: b'\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: CFAPattern (41730) - type: undefined (7) Tag Location: 578 - Data Location: 848 - value: b'\x00\x02\x00\x02\x01\x02\x00\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: CustomRendered (41985) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: DigitalZoomRatio (41988) - type: rational (5) Tag Location: 626 - Data Location: 856 - value: b'\x00\x00\x00\x01\x00\x00\x00\x01'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: FocalLengthIn35mmFilm (41989) - type: short (3) - value: b'\x004'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: SceneCaptureType (41990) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: GainControl (41991) - type: short (3) - value: b'\x00\x02'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Contrast (41992) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Saturation (41993) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: Sharpness (41994) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: SubjectDistanceRange (41996) - type: short (3) - value: b'\x00\x00'
+DEBUG 2021-03-17 14:14:42 TiffImagePlugin.py: 789] tag: unknown (0) - type: byte (1) - value: b'\x02\x02\x00\x00'
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 802
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-17 14:14:43 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+WARNING 2021-03-17 14:14:51 util.py: 42] Lossy conversion from float64 to uint8. Range [0, 1]. Convert image to uint8 prior to saving to suppress this warning.
