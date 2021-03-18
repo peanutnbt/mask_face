@@ -37,6 +37,7 @@ async def main(loop):
                 index_h = -1
                 index_w = index_w + 1
             index_h = index_h + 1
+    print("-------------------------------------------------------folders: ", folder_name_in_partition)
     data = await asyncio.gather(*(loop.run_in_executor(executor, f, folders) for folders in folder_name_in_partition))
 
     # print('got result', data)
@@ -48,37 +49,44 @@ def f(folders):
     image_test_folder = "data/images/"  
     index_to_zip = 0
     folder_arr = []
+    print("-------------------------------------------------------len(folders): ", len(folders))
 
-    for index, i in enumerate(folders, 0):
-        if os.path.isdir(image_test_folder + i) == True and i != '': 
-            folder_arr.append(image_test_folder + i)
-            print("i: ", i)
-            for file in  os.listdir(image_test_folder + i):
-                image_path = image_test_folder + i + "/" + file
-                if os.path.isfile(image_path) == True: 
-                    if file != '':
-                        image, is_image = read_and_resize(image_path)
-                        if is_image == True:
-                            detect(image, image_path, i) 
-                            
-                            align(image, image_path, i) 
+    try:
+        for index, i in enumerate(folders, 0):
+            print("-------------------------------------------------------folders: ", folders)
+            if os.path.isdir(image_test_folder + i) == True and i != '': 
+                folder_arr.append(image_test_folder + i)
+                print("i: ", i)
+                for file in  os.listdir(image_test_folder + i):
+                    image_path = image_test_folder + i + "/" + file
+                    if os.path.isfile(image_path) == True: 
+                        if file != '':
+                            image, is_image = read_and_resize(image_path)
+                            if is_image == True:
+                                detect(image, image_path, i) 
+                                
+                                align(image, image_path, i) 
 
-                            image_2, is_image_2 = read_and_resize_add_mask(image_path)
-                            list_mask_image_name = ["0.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"]
-                            add_mask(image_2, image_path, random.choice(list_mask_image_name), i)
-
-            # print("-------------------------------------------------------index_to_zip: ", index_to_zip)
-            # print("-------------------------------------------------------i: ", i)
-            # print("-------------------------------------------------------folders: ", folders)
-            # print("-------------------------------------------------------folders[-1]: ", folders[-1])
-            # print("-------------------------------------------------------index_to_zip == 1 or i == folders[-1]: ", index_to_zip == 1, i == folders[-1])
-            if index_to_zip == 1 or folders[index + 1] == '':
-                # print("---ZIP---")
-                zipit(folder_arr, "data/archive/" + i + ".zip")
-                # print("-------------------------------------------------------zip_name: ", "data/archive/" + i + ".zip")
-                # remove_folder(folder_arr)
-                index_to_zip = -1
-            index_to_zip = index_to_zip + 1
+                                image_2, is_image_2 = read_and_resize_add_mask(image_path)
+                                list_mask_image_name = ["0.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"]
+                                add_mask(image_2, image_path, random.choice(list_mask_image_name), i)
+                
+                print("-------------------------------------------------------index_to_zip: ", index_to_zip)
+                print("-------------------------------------------------------len(folders) - 1 == index: ", len(folders) - 1 == index)
+                check = index_to_zip == 1 or (index + 1 <= len(folders) - 1 and folders[index + 1] == '') or len(folders) - 1 == index
+                print("-------------------------------------------------------index_to_zip == 1 or (index + 1 <= len(folders) - 1 and folders[index + 1] == '') or len(folders) - 1 == index: ", check)
+                print("-------------------------------------------------------i: ", i)
+                print("-------------------------------------------------------folders: ", folders)
+                if index_to_zip == 1 or (index + 1 <= len(folders) - 1 and folders[index + 1] == '') or len(folders) - 1 == index:
+                    print("---ZIP---")
+                    zipit(folder_arr, "data/archive/" + i + ".zip")
+                    folder_arr = []
+                    print("-------------------------------------------------------zip_name: ", "data/archive/" + i + ".zip")
+                    # remove_folder(folder_arr)
+                    index_to_zip = -1
+                index_to_zip = index_to_zip + 1
+    except Exception as e:
+        print("-------------e-----------: ", e)
 
 def read_and_resize(file):
     # read image

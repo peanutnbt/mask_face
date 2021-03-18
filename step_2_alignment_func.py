@@ -56,26 +56,36 @@ def align(image, image_path, first_dir):
     with open(image_det_txt_path, 'r') as f:
         lines = f.readlines()
     try:
+        max_size = 0
         for i, line in enumerate(lines):
             line = line.strip().split()
             det = np.asarray(list(map(int, line[0:4])), dtype=np.int32)
-            landmarks = faceAlignModelHandler.inference_on_image(image, det)
-            #
-            image_path_main = image_path.split(".")[0]
-            image_path_ext = image_path.split(".")[1]
-            # save_path_img = image_path_main + "_landmark." + image_path_ext 
-            #
-            # save_path_txt = image_det_txt_path.replace("detect_res", "landmark_res")
-            save_path_txt = image_det_txt_path.replace("_box", "_landmark")
+            #Cal width height
+            xy = np.array([det[0], det[1]])
+            zz = np.array([det[2], det[3]])
+            wh = zz - xy + 1
+            box_area = wh[0] * wh[1]
+            if box_area > max_size:
+                max_size = box_area
+                #Cal width height end
+                landmarks = faceAlignModelHandler.inference_on_image(image, det)
+                #
+                image_path_main = image_path.split(".")[0]
+                image_path_ext = image_path.split(".")[1]
+                # save_path_img = image_path_main + "_landmark." + image_path_ext 
+                #
+                # save_path_txt = image_det_txt_path.replace("detect_res", "landmark_res")
+                save_path_txt = image_det_txt_path.replace("_box", "_landmark")
 
 
-            image_show = image.copy()
-            with open(save_path_txt, "w") as fd:
-                for (x, y) in landmarks.astype(np.int32):
-                    cv2.circle(image_show, (x, y), 2, (255, 0, 0),-1)
-                    line = str(x) + ' ' + str(y) + ' '
-                    fd.write(line)
-
+                image_show = image.copy()
+                with open(save_path_txt, "w") as fd:
+                    for (x, y) in landmarks.astype(np.int32):
+                        cv2.circle(image_show, (x, y), 2, (255, 0, 0),-1)
+                        line = str(x) + ' ' + str(y) + ' '
+                        fd.write(line)
+            else:
+                continue
             # cv2.imwrite(save_path_img, image_show)
     except Exception as e:
         logger.error('Face landmark failed!')
