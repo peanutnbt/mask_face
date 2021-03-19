@@ -1,21 +1,22 @@
-FROM continuumio/miniconda:latest
- 
+FROM python:3
+
 WORKDIR /app
- 
-COPY ./environment.yml ./
- 
-RUN conda env create -f environment.yml -n my_env
- 
-# ENV PATH /opt/conda/envs/my_env/bin:$PATH
- 
-# RUN /bin/bash -c "source activate my_env"
 
-COPY ./ ./
+COPY requirements.txt ./
 
-# RUN ["conda", "activate", "my_env"]
-# RUN conda install -n my_env --file environment.yml
-# RUN ["conda", "install", "-c", "conda-forge", "opencv"]
-# RUN ["apt-get", "update"]
-# RUN ["apt-get", "install", "-y", "cmake"]
-# RUN ["apt", "install", "-y", "libopencv-dev"]
-# RUN ["apt", "install", "-y", "python-opencv"]
+RUN pip install --no-cache-dir --upgrade pip
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install --default-timeout=100 future 
+RUN pip install opencv_python
+RUN pip install --no-cache-dir -r requirements.txt 
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
+COPY . .
+
+ENTRYPOINT [ "python", "read_file_multiprocess.py" ]
+
+
+# docker run -it -v /home/bao/Desktop/Coding/Python/IMAGES:/app/data/images  mask_face:2.0 /bin/bash
+
+# docker run -d -v /home/bao/Desktop/Coding/Python/IMAGES:/app/data/images -v /home/bao/Desktop/Coding/Python/ARCHIVE:/app/data/archive mask_face:2.0 
