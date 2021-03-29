@@ -1,55 +1,58 @@
-WARNING 2021-03-18 17:05:47 util.py: 42] Lossy conversion from float64 to uint8. Range [0, 1]. Convert image to uint8 prior to saving to suppress this warning.
-INFO 2021-03-18 17:05:50 FaceDetModelLoader.py: 16] Start to analyze the face detection model, model path: face_sdk/models, model category: face_detection，model name: face_detection_1.0
-INFO 2021-03-18 17:05:50 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
-INFO 2021-03-18 17:05:50 FaceDetModelLoader.py: 36] Successfully loaded the face detection model!
-INFO 2021-03-18 17:06:07 FaceAlignModelLoader.py: 16] Start to analyze the face landmark model, model path: models, model category: face_alignment，model name: face_alignment_1.0
-INFO 2021-03-18 17:06:07 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
-INFO 2021-03-18 17:06:07 FaceAlignModelLoader.py: 29] Successfully loaded the face landmark model!
-DEBUG 2021-03-18 17:06:18 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:18 PngImagePlugin.py: 141] STREAM b'IDAT' 41 65536
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 802
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:06:24 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-WARNING 2021-03-18 17:07:33 util.py: 42] Lossy conversion from float64 to uint8. Range [0, 1]. Convert image to uint8 prior to saving to suppress this warning.
-INFO 2021-03-18 17:07:37 FaceDetModelLoader.py: 16] Start to analyze the face detection model, model path: face_sdk/models, model category: face_detection，model name: face_detection_1.0
-INFO 2021-03-18 17:07:37 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
-INFO 2021-03-18 17:07:37 FaceDetModelLoader.py: 36] Successfully loaded the face detection model!
-INFO 2021-03-18 17:07:50 FaceAlignModelLoader.py: 16] Start to analyze the face landmark model, model path: models, model category: face_alignment，model name: face_alignment_1.0
-INFO 2021-03-18 17:07:50 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
-INFO 2021-03-18 17:07:50 FaceAlignModelLoader.py: 29] Successfully loaded the face landmark model!
-DEBUG 2021-03-18 17:07:54 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:54 PngImagePlugin.py: 141] STREAM b'IDAT' 41 65536
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 802
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IHDR' 16 13
-DEBUG 2021-03-18 17:07:56 PngImagePlugin.py: 141] STREAM b'IDAT' 41 8192
-WARNING 2021-03-18 17:08:54 util.py: 42] Lossy conversion from float64 to uint8. Range [0, 1]. Convert image to uint8 prior to saving to suppress this warning.
+INFO 2021-03-29 10:17:02 FaceDetModelLoader.py: 17] Start to analyze the face detection model, model path: face_sdk/models, model category: face_detection，model name: face_detection_1.0
+INFO 2021-03-29 10:17:02 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
+INFO 2021-03-29 10:17:02 FaceDetModelLoader.py: 38] Successfully loaded the face detection model!
+INFO 2021-03-29 10:17:02 FaceAlignModelLoader.py: 17] Start to analyze the face landmark model, model path: models, model category: face_alignment，model name: face_alignment_1.0
+INFO 2021-03-29 10:17:02 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
+INFO 2021-03-29 10:17:02 FaceAlignModelLoader.py: 30] Successfully loaded the face landmark model!
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IDAT' 41 802
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:02 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:03 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:03 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:03 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:03 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+WARNING 2021-03-29 10:17:07 util.py: 42] Lossy conversion from float64 to uint8. Range [0, 1]. Convert image to uint8 prior to saving to suppress this warning.
+INFO 2021-03-29 10:17:07 FaceDetModelLoader.py: 17] Start to analyze the face detection model, model path: face_sdk/models, model category: face_detection，model name: face_detection_1.0
+INFO 2021-03-29 10:17:07 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
+INFO 2021-03-29 10:17:07 FaceDetModelLoader.py: 38] Successfully loaded the face detection model!
+INFO 2021-03-29 10:17:07 FaceAlignModelLoader.py: 17] Start to analyze the face landmark model, model path: models, model category: face_alignment，model name: face_alignment_1.0
+INFO 2021-03-29 10:17:07 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
+INFO 2021-03-29 10:17:07 FaceAlignModelLoader.py: 30] Successfully loaded the face landmark model!
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 802
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IHDR' 16 13
+DEBUG 2021-03-29 10:17:08 PngImagePlugin.py: 186] STREAM b'IDAT' 41 8192
+WARNING 2021-03-29 10:17:12 util.py: 42] Lossy conversion from float64 to uint8. Range [0, 1]. Convert image to uint8 prior to saving to suppress this warning.
+DEBUG 2021-03-29 10:20:59 font_manager.py: 1436] Using fontManager instance from /home/ubuntu/.cache/matplotlib/fontlist-v330.json
+DEBUG 2021-03-29 10:21:00 selector_events.py: 54] Using selector: EpollSelector
+INFO 2021-03-29 10:21:00 FaceDetModelLoader.py: 17] Start to analyze the face detection model, model path: face_sdk/models, model category: face_detection，model name: face_detection_1.0
+INFO 2021-03-29 10:21:00 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
+INFO 2021-03-29 10:21:02 FaceDetModelLoader.py: 38] Successfully loaded the face detection model!
+INFO 2021-03-29 10:21:02 FaceAlignModelLoader.py: 17] Start to analyze the face landmark model, model path: models, model category: face_alignment，model name: face_alignment_1.0
+INFO 2021-03-29 10:21:02 BaseModelLoader.py: 34] Successfully parsed the model configuration file meta.json!
+INFO 2021-03-29 10:21:02 FaceAlignModelLoader.py: 30] Successfully loaded the face landmark model!

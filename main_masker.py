@@ -152,14 +152,17 @@ class FaceMasker:
         #     image = cv2.resize(image, None, fx=0.2, fy=0.2, interpolation=cv2.INTER_CUBIC)
         # # resize
 
-
-        ref_texture_src = self.template_name2ref_texture_src[template_name] 
+        ref_texture_src = self.template_name2ref_texture_src[template_name]
         uv_mask_src = self.template_name2uv_mask_src[template_name]
+        print("---------------------------1---------------: ")
+
         if image.ndim == 2:
             image = cv2.cvtColor(image, cv2.COLOR_GRAY2RGB)
         [h, w, c] = image.shape
         if c == 4:
             image = image[:,:,:3]
+        print("---------------------------2---------------: ")
+
         pos, vertices = self.get_vertices(face_lms, image) #3d reconstruction -> get texture. 
         image = image/255. #!!
         texture = cv2.remap(image, pos[:,:,:2].astype(np.float32), None, 
@@ -167,11 +170,17 @@ class FaceMasker:
                             borderMode=cv2.BORDER_CONSTANT,borderValue=(0))
         new_texture = self.get_new_texture(ref_texture_src, uv_mask_src, texture)
         new_colors = self.prn.get_colors_from_texture(new_texture)
-        
+        print("---------------------------3---------------: ")
+
         # render
         face_mask, new_image = self.render(vertices, new_colors, h, w)
+        print("---------------------------4---------------: ")
+
         new_image = image * (1 - face_mask[:, :, np.newaxis]) + new_image * face_mask[:, :, np.newaxis]
+        print("---------------------------5---------------: ")
+
         new_image = np.clip(new_image, -1, 1) #must clip to (-1, 1)!
+        print("---------------------------HERE---------------: ", image_path)
 
         imsave(masked_face_path, new_image) 
 

@@ -68,7 +68,8 @@ def detect(image, image_path, first_dir):
     image_path_main = image_path.split(".")[0]
     image_path_ext = image_path.split(".")[1]
     # save_path_img = image_path_main + "_detect." + image_path_ext
-    save_path_txt = 'data/images/' + first_dir + "/" + image_path.split(".")[0].split("/")[-1] + "_box" + ".txt"
+
+    save_path_txt = '/media/ubuntu/DATA/vinh/face-datasets/ms1m-retinaface-t1/images/' + first_dir + "/" + image_path.split(".")[0].split("/")[-1] + "_box" + ".txt"
 
 
     bboxs = dets
@@ -79,8 +80,8 @@ def detect(image, image_path, first_dir):
                    str(box[4]) + " \n"
             fd.write(line)
 
-    for box in bboxs:
-        box = list(map(int, box))
-        cv2.rectangle(image, (box[0], box[1]), (box[2], box[3]), (0, 0, 255), 2)
+    # for box in bboxs:
+    #     box = list(map(int, box))
+    #     cv2.rectangle(image, (box[0], box[1]), (box[2], box[3]), (0, 0, 255), 2)
     # cv2.imwrite(save_path_img, image)
     logger.info('Successfully generate face detection results!')

@@ -28,6 +28,8 @@ class FaceDetModelLoader(BaseModelLoader):
             print("------------------------------: ", self.cfg['model_file_path'])
             # model = torch.load("models/face_detection/face_detection_1.0/face_detection_retina.pkl", map_location=torch.device('cpu'))
             model = torch.load(self.cfg['model_file_path'], map_location=torch.device('cpu'))
+            if torch.cuda.is_available():
+                model = model.to('cuda')
         except Exception as e:
             logger.error('The model failed to load, please check the model path: %s!'
                          % self.cfg['model_file_path'])

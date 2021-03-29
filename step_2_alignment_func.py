@@ -4,6 +4,7 @@
 @contact: jun21wangustc@gmail.com 
 """
 import sys
+import os
 sys.path.append('.')
 import logging.config
 logging.config.fileConfig("face_sdk/config/logging.conf")
@@ -51,10 +52,16 @@ def align(image, image_path, first_dir):
 
     faceAlignModelHandler = FaceAlignModelHandler(model, 'cpu', cfg)
 
-    image_det_txt_path = 'data/images/' + first_dir + "/" + image_path.split(".")[0].split("/")[-1] + "_box" + ".txt"
+    image_det_txt_path = '/media/ubuntu/DATA/vinh/face-datasets/ms1m-retinaface-t1/images/' + first_dir + "/" + image_path.split(".")[0].split("/")[-1] + "_box" + ".txt"
+    try:
+        if os.path.exists(image_det_txt_path):
+            with open(image_det_txt_path, 'r') as f:
+                lines = f.readlines()
+        else:
+            pass
+    except:
+        pass
 
-    with open(image_det_txt_path, 'r') as f:
-        lines = f.readlines()
     try:
         max_size = 0
         for i, line in enumerate(lines):
@@ -90,6 +97,6 @@ def align(image, image_path, first_dir):
     except Exception as e:
         logger.error('Face landmark failed!')
         logger.error(e)
-        sys.exit(-1)
+        pass
     else:
         logger.info('Successful face landmark!')
