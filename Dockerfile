@@ -17,6 +17,6 @@ COPY . .
 ENTRYPOINT [ "python", "read_file_multiprocess.py" ]
 
 
-# docker run -it -v /home/bao/Desktop/Coding/Python/IMAGES:/app/data/images  mask_face:2.0 /bin/bash
+# docker run -it -v /home/bao/Desktop/Coding/Python/IMAGES:/app/data/images  tanikemen/mask_face:2.0 /bin/bash
 
-# docker run -d -v /home/bao/Desktop/Coding/Python/IMAGES:/app/data/images -v /home/bao/Desktop/Coding/Python/ARCHIVE:/app/data/archive mask_face:2.0 
+# docker run -d -v /home/bao/Desktop/Coding/Python/IMAGES:/app/data/images -v /home/bao/Desktop/Coding/Python/ARCHIVE:/app/data/archive tanikemen/mask_face:2.0

@@ -16,7 +16,7 @@ import filetype
 async def main(loop):
     # print('entering main')
     num_processes = mp.cpu_count()
-    executor = ProcessPoolExecutor(max_workers=num_processes)
+    executor = ProcessPoolExecutor(max_workers=8)
 
     file_name_array = []
 
@@ -37,7 +37,6 @@ async def main(loop):
                 index_h = -1
                 index_w = index_w + 1
             index_h = index_h + 1
-    print("-------------------------------------------------------folders: ", folder_name_in_partition)
     data = await asyncio.gather(*(loop.run_in_executor(executor, f, folders) for folders in folder_name_in_partition))
 
     # print('got result', data)
@@ -49,44 +48,39 @@ def f(folders):
     image_test_folder = "/media/ubuntu/DATA/vinh/face-datasets/ms1m-retinaface-t1/images/"
     index_to_zip = 0
     folder_arr = []
-    print("-------------------------------------------------------len(folders): ", len(folders))
 
     try:
         for index, i in enumerate(folders, 0):
-            print("-------------------------------------------------------folders: ", folders)
             if os.path.isdir(image_test_folder + i) == True and i != '': 
                 folder_arr.append(image_test_folder + i)
                 print("i: ", i)
                 for file in os.listdir(image_test_folder + i):
+
                     image_path = image_test_folder + i + "/" + file
                     print("image_path:", image_path)
 
                     image_path_mask = image_path.split(".")[0] + "_mask." + image_path.split(".")[-1]
 
                     if os.path.isfile(image_path) == True and image_path.find("mask") == -1 and os.path.isfile(image_path_mask) == False and image_path.split(".")[-1] != "txt":
+                        print("--------------0---------")
                         if file != '':
                             image, is_image = read_and_resize(image_path)
                             if is_image == True:
-                                detect(image, image_path, i) 
+                                detect_val = detect(image, image_path, i) 
                                 
-                                align(image, image_path, i) 
+                                align_val = align(image, image_path, i, detect_val) 
 
                                 # image_2, is_image_2 = read_and_resize_add_mask(image_path)
                                 list_mask_image_name = ["0.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png"]
                                 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-                                add_mask(image, image_path, random.choice(list_mask_image_name), i)
-                
-                print("-------------------------------------------------------index_to_zip: ", index_to_zip)
-                print("-------------------------------------------------------len(folders) - 1 == index: ", len(folders) - 1 == index)
-                check = index_to_zip == 1 or (index + 1 <= len(folders) - 1 and folders[index + 1] == '') or len(folders) - 1 == index
-                print("-------------------------------------------------------index_to_zip == 1 or (index + 1 <= len(folders) - 1 and folders[index + 1] == '') or len(folders) - 1 == index: ", check)
-                print("-------------------------------------------------------i: ", i)
-                print("-------------------------------------------------------folders: ", folders)
+                                add_mask(image, image_path, random.choice(list_mask_image_name), i, align_val)
+
                 if index_to_zip == 1 or (index + 1 <= len(folders) - 1 and folders[index + 1] == '') or len(folders) - 1 == index:
                     print("---ZIP---")
                     # zipit(folder_arr, "data/archive/" + i + ".zip")
                     folder_arr = []
                     # print("-------------------------------------------------------zip_name: ", "data/archive/" + i + ".zip")
+
                     # remove_folder(folder_arr)
                     index_to_zip = -1
                 index_to_zip = index_to_zip + 1
